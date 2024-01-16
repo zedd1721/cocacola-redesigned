@@ -32,7 +32,13 @@ gsap.from(".row",{
     x: 550,
     duration: 1,
     stagger: 1,
-    delay:2,
+    delay:1.5,
+    scrollTrigger: {
+        trigger: ".row",
+        scroller: "body",
+        // markers: true,
+
+    }
     
 })
 
@@ -40,7 +46,16 @@ tl.from(".middle .capsule", {
     scale: 0,
     opacity: 0,
     duration: 2,
-    delay: 3.5,
+    delay: 0,
+    scrollTrigger: {
+        trigger: ".middle .capsule",
+        scroller: "body",
+        // markers: true,
+        // start: "top 90%",
+        end: "top 20%", 
+        scrub: 3,
+
+    }
 })
 
 gsap.from(".scroll", {
